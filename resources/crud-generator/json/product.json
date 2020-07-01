@@ -1,0 +1,28 @@
+{
+    "fields": [        
+        {
+            "name": "name",
+            "type": "string"
+        },
+        {
+            "name": "year",
+            "type": "string"
+        },
+        {
+            "name": "month",
+            "type": "string"
+        },
+        {
+            "name": "place",
+            "type": "string"
+        },
+        {
+            "name": "output",
+            "type": "string"
+        },
+        {
+            "name": "unit",
+            "type": "string"
+        }
+    ]
+}
