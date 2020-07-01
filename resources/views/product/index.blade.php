@@ -7,7 +7,7 @@
 
             <div class="col-md-9">
                 <div class="card">
-                    <div class="card-header">Product</div>
+                    <div class="card-header">Product (แสดงผลผลิตปีล่าสุดของแต่ละชนิดสินค้า)</div>
                     <div class="card-body">
                         <a href="{{ url('/product/create') }}" class="btn btn-success btn-sm" title="Add New Product">
                             <i class="fa fa-plus" aria-hidden="true"></i> Add New
