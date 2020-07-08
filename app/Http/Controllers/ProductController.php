@@ -35,6 +35,7 @@ class ProductController extends Controller
                     //->whereRaw("concat('',volume * 1) = volume", [])
                     ->groupBy('harvest_date')
                     ->select('harvest_date', DB::raw('SUM(volume) as total_volume'))
+                    ->oldest()
                     ->get();
                 break;
             default :
