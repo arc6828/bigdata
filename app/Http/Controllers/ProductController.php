@@ -32,7 +32,7 @@ class ProductController extends Controller
                 $product = Product::where('resource_name',$resource_name)->latest()->get();
                 
                 $product_thailands = Product::where('resource_name',$resource_name)
-                    ->whereRaw("concat('',volume * 1) = volume", [])
+                    //->whereRaw("concat('',volume * 1) = volume", [])
                     ->groupBy('harvest_date')
                     ->select('harvest_date', DB::raw('SUM(volume) as total_volume'))
                     ->get();

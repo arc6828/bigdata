@@ -19,7 +19,7 @@ class CreateProductsTable extends Migration
             $table->string('area')->nullable();
             $table->string('resource_name')->nullable();
             $table->string('label')->nullable();
-            $table->string('volume')->nullable();
+            $table->float('volume',16,2)->nullable();
             $table->string('freq')->nullable();
             });
     }
