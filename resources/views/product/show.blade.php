@@ -27,7 +27,7 @@
                                     <tr>
                                         <th>ID</th><td>{{ $product->id }}</td>
                                     </tr>
-                                    <tr><th> Name </th><td> {{ $product->name }} </td></tr><tr><th> Year </th><td> {{ $product->year }} </td></tr><tr><th> Month </th><td> {{ $product->month }} </td></tr><tr><th> Place </th><td> {{ $product->place }} </td></tr><tr><th> Output </th><td> {{ $product->output }} </td></tr><tr><th> Unit </th><td> {{ $product->unit }} </td></tr>
+                                    <tr><th> Harvest Date </th><td> {{ $product->harvest_date }} </td></tr><tr><th> Area </th><td> {{ $product->area }} </td></tr><tr><th> Resource Name </th><td> {{ $product->resource_name }} </td></tr><tr><th> Label </th><td> {{ $product->label }} </td></tr><tr><th> Volume </th><td> {{ $product->volume }} </td></tr><tr><th> Freq </th><td> {{ $product->freq }} </td></tr>
                                 </tbody>
                             </table>
                         </div>

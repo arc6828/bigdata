@@ -1,32 +1,32 @@
-<div class="form-group {{ $errors->has('name') ? 'has-error' : ''}}">
-    <label for="name" class="control-label">{{ 'Name' }}</label>
-    <input class="form-control" name="name" type="text" id="name" value="{{ isset($product->name) ? $product->name : ''}}" >
-    {!! $errors->first('name', '<p class="help-block">:message</p>') !!}
+<div class="form-group {{ $errors->has('harvest_date') ? 'has-error' : ''}}">
+    <label for="harvest_date" class="control-label">{{ 'Harvest Date' }}</label>
+    <input class="form-control" name="harvest_date" type="text" id="harvest_date" value="{{ isset($product->harvest_date) ? $product->harvest_date : ''}}" >
+    {!! $errors->first('harvest_date', '<p class="help-block">:message</p>') !!}
 </div>
-<div class="form-group {{ $errors->has('year') ? 'has-error' : ''}}">
-    <label for="year" class="control-label">{{ 'Year' }}</label>
-    <input class="form-control" name="year" type="text" id="year" value="{{ isset($product->year) ? $product->year : ''}}" >
-    {!! $errors->first('year', '<p class="help-block">:message</p>') !!}
+<div class="form-group {{ $errors->has('area') ? 'has-error' : ''}}">
+    <label for="area" class="control-label">{{ 'Area' }}</label>
+    <input class="form-control" name="area" type="text" id="area" value="{{ isset($product->area) ? $product->area : ''}}" >
+    {!! $errors->first('area', '<p class="help-block">:message</p>') !!}
 </div>
-<div class="form-group {{ $errors->has('month') ? 'has-error' : ''}}">
-    <label for="month" class="control-label">{{ 'Month' }}</label>
-    <input class="form-control" name="month" type="text" id="month" value="{{ isset($product->month) ? $product->month : ''}}" >
-    {!! $errors->first('month', '<p class="help-block">:message</p>') !!}
+<div class="form-group {{ $errors->has('resource_name') ? 'has-error' : ''}}">
+    <label for="resource_name" class="control-label">{{ 'Resource Name' }}</label>
+    <input class="form-control" name="resource_name" type="text" id="resource_name" value="{{ isset($product->resource_name) ? $product->resource_name : ''}}" >
+    {!! $errors->first('resource_name', '<p class="help-block">:message</p>') !!}
 </div>
-<div class="form-group {{ $errors->has('place') ? 'has-error' : ''}}">
-    <label for="place" class="control-label">{{ 'Place' }}</label>
-    <input class="form-control" name="place" type="text" id="place" value="{{ isset($product->place) ? $product->place : ''}}" >
-    {!! $errors->first('place', '<p class="help-block">:message</p>') !!}
+<div class="form-group {{ $errors->has('label') ? 'has-error' : ''}}">
+    <label for="label" class="control-label">{{ 'Label' }}</label>
+    <input class="form-control" name="label" type="text" id="label" value="{{ isset($product->label) ? $product->label : ''}}" >
+    {!! $errors->first('label', '<p class="help-block">:message</p>') !!}
 </div>
-<div class="form-group {{ $errors->has('output') ? 'has-error' : ''}}">
-    <label for="output" class="control-label">{{ 'Output' }}</label>
-    <input class="form-control" name="output" type="text" id="output" value="{{ isset($product->output) ? $product->output : ''}}" >
-    {!! $errors->first('output', '<p class="help-block">:message</p>') !!}
+<div class="form-group {{ $errors->has('volume') ? 'has-error' : ''}}">
+    <label for="volume" class="control-label">{{ 'Volume' }}</label>
+    <input class="form-control" name="volume" type="text" id="volume" value="{{ isset($product->volume) ? $product->volume : ''}}" >
+    {!! $errors->first('volume', '<p class="help-block">:message</p>') !!}
 </div>
-<div class="form-group {{ $errors->has('unit') ? 'has-error' : ''}}">
-    <label for="unit" class="control-label">{{ 'Unit' }}</label>
-    <input class="form-control" name="unit" type="text" id="unit" value="{{ isset($product->unit) ? $product->unit : ''}}" >
-    {!! $errors->first('unit', '<p class="help-block">:message</p>') !!}
+<div class="form-group {{ $errors->has('freq') ? 'has-error' : ''}}">
+    <label for="freq" class="control-label">{{ 'Freq' }}</label>
+    <input class="form-control" name="freq" type="text" id="freq" value="{{ isset($product->freq) ? $product->freq : ''}}" >
+    {!! $errors->first('freq', '<p class="help-block">:message</p>') !!}
 </div>
 
 

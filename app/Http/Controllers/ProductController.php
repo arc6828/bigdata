@@ -7,6 +7,7 @@ use App\Http\Requests;
 
 use App\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
@@ -17,22 +18,43 @@ class ProductController extends Controller
      */
     public function index(Request $request)
     {
-        $keyword = $request->get('search');
-        $perPage = 25;
+        //$keyword = $request->get('search');
+        $resource_name = $request->get('resource_name');
+        //$perPage = 25;
 
+        switch($resource_name){
+            case "ข้าวนาปี" : 
+            case "ข้าวนาปรัง" : 
+            case "มันสำปะหลัง" : 
+            case "ข้าวโพด" : 
+            case "ยางพารา" : 
+            case "ปาล์ม" :                 
+                $product = Product::where('resource_name',$resource_name)->latest()->get();
+                
+                $product_thailands = Product::where('resource_name',$resource_name)
+                    ->groupBy('harvest_date')
+                    ->select('harvest_date', DB::raw('SUM(volume) as total_volume'))
+                    ->get();
+                break;
+            default :
+                return redirect('product?resource_name=ข้าวโพด');
+
+        }
+
+        /*
         if (!empty($keyword)) {
-            $product = Product::where('name', 'LIKE', "%$keyword%")
-                ->orWhere('year', 'LIKE', "%$keyword%")
-                ->orWhere('month', 'LIKE', "%$keyword%")
-                ->orWhere('place', 'LIKE', "%$keyword%")
-                ->orWhere('output', 'LIKE', "%$keyword%")
-                ->orWhere('unit', 'LIKE', "%$keyword%")
+            $product = Product::where('harvest_date', 'LIKE', "%$keyword%")
+                ->orWhere('area', 'LIKE', "%$keyword%")
+                ->orWhere('resource_name', 'LIKE', "%$keyword%")
+                ->orWhere('label', 'LIKE', "%$keyword%")
+                ->orWhere('volume', 'LIKE', "%$keyword%")
+                ->orWhere('freq', 'LIKE', "%$keyword%")
                 ->latest()->paginate($perPage);
         } else {
             $product = Product::latest()->paginate($perPage);
         }
-
-        return view('product.index', compact('product'));
+        */
+        return view('product.index', compact('product','product_thailands'));
     }
 
     /**

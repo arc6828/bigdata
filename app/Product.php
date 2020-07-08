@@ -25,7 +25,7 @@ class Product extends Model
      *
      * @var array
      */
-    protected $fillable = ['name', 'year', 'month', 'place', 'output', 'unit'];
+    protected $fillable = ['harvest_date', 'area', 'resource_name', 'label', 'volume', 'freq'];
 
     
 }

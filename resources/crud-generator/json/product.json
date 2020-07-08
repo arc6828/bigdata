@@ -1,27 +1,27 @@
 {
     "fields": [        
         {
-            "name": "name",
+            "name": "harvest_date",
             "type": "string"
         },
         {
-            "name": "year",
+            "name": "area",
             "type": "string"
         },
         {
-            "name": "month",
+            "name": "resource_name",
             "type": "string"
         },
         {
-            "name": "place",
+            "name": "label",
             "type": "string"
         },
         {
-            "name": "output",
+            "name": "volume",
             "type": "string"
         },
         {
-            "name": "unit",
+            "name": "freq",
             "type": "string"
         }
     ]

@@ -15,12 +15,12 @@ class CreateProductsTable extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->string('name')->nullable();
-            $table->string('year')->nullable();
-            $table->string('month')->nullable();
-            $table->string('place')->nullable();
-            $table->string('output')->nullable();
-            $table->string('unit')->nullable();
+            $table->string('harvest_date')->nullable();
+            $table->string('area')->nullable();
+            $table->string('resource_name')->nullable();
+            $table->string('label')->nullable();
+            $table->string('volume')->nullable();
+            $table->string('freq')->nullable();
             });
     }
 

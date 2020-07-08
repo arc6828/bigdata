@@ -28,7 +28,12 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                        <li><a class="nav-link" href="{{ url('product?resource_name=ข้าวนาปี') }}">ข้าวนาปี</a></li>
+                        <li><a class="nav-link" href="{{ url('product?resource_name=ข้าวนาปรัง') }}">ข้าวนาปรัง</a></li>
+                        <li><a class="nav-link" href="{{ url('product?resource_name=มันสำปะหลัง') }}">มันสำปะหลัง</a></li>
+                        <li><a class="nav-link" href="{{ url('product?resource_name=ข้าวโพด') }}">ข้าวโพด</a></li>
+                        <li><a class="nav-link" href="{{ url('product?resource_name=ยางพารา') }}">ยางพารา</a></li>
+                        <li><a class="nav-link" href="{{ url('product?resource_name=ปาล์ม') }}">ปาล์ม</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
