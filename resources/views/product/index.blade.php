@@ -15,7 +15,7 @@
             ]);
 
             var options = {
-            title: 'Volume',
+            title: 'Volume of a whole country',
             curveType: 'function',
             legend: { position: 'bottom' }
             };
@@ -24,6 +24,25 @@
 
             chart.draw(data, options);
         }
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            console.log('DOM fully loaded and parsed');
+            $('#table').DataTable({
+                ajax: {
+                    url: "{{ url('api/product?resource_name='.request('resource_name')) }}",
+                    dataSrc: ''
+                },
+                columns: [
+                    { data: 'id' },
+                    { data: 'harvest_date' },                    
+                    { data: 'area' },
+                    { data: 'resource_name' },
+                    { data: 'label' },
+                    { data: 'volume' },
+                    { data: 'freq' } , 
+                ]
+            } );
+        });
     </script>
     <div class="container">
         <div id="curve_chart" style="width: 900px; height: 500px"></div>
@@ -38,7 +57,7 @@
                             <i class="fa fa-plus" aria-hidden="true"></i> Add New
                         </a>
 
-                        <form method="GET" action="{{ url('/product') }}" accept-charset="UTF-8" class="form-inline my-2 my-lg-0 float-right" role="search">
+                        <form method="GET" action="{{ url('/product') }}" accept-charset="UTF-8" class="form-inline my-2 my-lg-0 float-right  d-none" role="search">
                             <div class="input-group">
                                 <input type="text" class="form-control" name="search" placeholder="Search..." value="{{ request('search') }}">
                                 <span class="input-group-append">
@@ -49,16 +68,15 @@
                             </div>
                         </form>
 
-                        <br/>
-                        <br/>
                         <div class="table-responsive">
-                            <table class="table table-sm">
+                            <table class="table table-sm" id="table" width="100%">
                                 <thead>
                                     <tr>
-                                        <th>#</th><th>Harvest Date</th><th>Area</th><th>Resource Name</th><th>Label</th><th>Volume</th><th>Freq</th><th>Actions</th>
+                                        <th>#</th><th>Harvest Date</th><th>Area</th><th>Resource Name</th><th>Label</th><th>Volume</th><th>Freq</th><th class="d-none">Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                @if(false)
                                 @foreach($product as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
@@ -75,6 +93,7 @@
                                         </td>
                                     </tr>
                                 @endforeach
+                                @endif
                                 </tbody>
                             </table>
                             @if(false)
