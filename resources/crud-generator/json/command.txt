@@ -1,1 +1,3 @@
 php artisan crud:generate Product --fields_from_file="resources/crud-generator/json/product.json"
+
+php artisan crud:generate Export --fields_from_file="resources/crud-generator/json/export.json"

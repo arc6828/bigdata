@@ -1,0 +1,212 @@
+{
+    "fields": [        
+        {
+            "name": "a",
+            "type": "string"
+        },
+        {
+            "name": "declaration_type",
+            "type": "string"
+        },
+        {
+            "name": "year_in_yy",
+            "type": "string"
+        },
+        {
+            "name": "month",
+            "type": "string"
+        },
+        {
+            "name": "running_no",
+            "type": "string"
+        },
+        {
+            "name": "item_no",
+            "type": "string"
+        },
+        {
+            "name": "origin_code",
+            "type": "string"
+        },
+        {
+            "name": "destination_code",
+            "type": "string"
+        },
+        {
+            "name": "transportation",
+            "type": "string"
+        },
+        {
+            "name": "tax_id",
+            "type": "string"
+        },
+        {
+            "name": "company_branch",
+            "type": "string"
+        },
+        {
+            "name": "customs_coordinates",
+            "type": "string"
+        },
+        {
+            "name": "product_code",
+            "type": "string"
+        },
+        {
+            "name": "product_code_unit",
+            "type": "string"
+        },
+        {
+            "name": "privilege_code",
+            "type": "string"
+        },
+        {
+            "name": "duty_rate_percent",
+            "type": "string"
+        },
+        {
+            "name": "duty_rate_condition",
+            "type": "string"
+        },
+        {
+            "name": "brought_back",
+            "type": "string"
+        },
+        {
+            "name": "promote_investment",
+            "type": "string"
+        },
+        {
+            "name": "bonded_warehouse",
+            "type": "string"
+        },
+        {
+            "name": "claim_duty",
+            "type": "string"
+        },
+        {
+            "name": "reimport_reexport",
+            "type": "string"
+        },
+        {
+            "name": "freezone",
+            "type": "string"
+        },
+        {
+            "name": "epz",
+            "type": "string"
+        },
+        {
+            "name": "multiple_boat_declaration",
+            "type": "string"
+        },
+        {
+            "name": "import_export_date",
+            "type": "string"
+        },
+        {
+            "name": "payment_place_code",
+            "type": "string"
+        },
+        {
+            "name": "payment_number",
+            "type": "string"
+        },
+        {
+            "name": "payment_date",
+            "type": "string"
+        },
+        {
+            "name": "release_location_code",
+            "type": "string"
+        },
+        {
+            "name": "release_date",
+            "type": "string"
+        },
+        {
+            "name": "pickup_location_code",
+            "type": "string"
+        },
+        {
+            "name": "pickup_date",
+            "type": "string"
+        },
+        {
+            "name": "making_year",
+            "type": "string"
+        },
+        {
+            "name": "making_month",
+            "type": "string"
+        },
+        {
+            "name": "weight",
+            "type": "string"
+        },
+        {
+            "name": "volume",
+            "type": "string"
+        },
+        {
+            "name": "value_in_baht",
+            "type": "string"
+        },
+        {
+            "name": "value_in_other",
+            "type": "string"
+        },
+        {
+            "name": "currency_code",
+            "type": "string"
+        },
+        {
+            "name": "duty",
+            "type": "string"
+        },
+        {
+            "name": "vat",
+            "type": "string"
+        },
+        {
+            "name": "excise_tax",
+            "type": "string"
+        },
+        {
+            "name": "fee",
+            "type": "string"
+        },
+        {
+            "name": "commerce_fee",
+            "type": "string"
+        },
+        {
+            "name": "interior_tax",
+            "type": "string"
+        },
+        {
+            "name": "other_tax",
+            "type": "string"
+        },
+        {
+            "name": "excise_coordinate",
+            "type": "string"
+        },
+        {
+            "name": "excise_tax_percent",
+            "type": "string"
+        },
+        {
+            "name": "excise_tax_condition",
+            "type": "string"
+        },
+        {
+            "name": "customs_set",
+            "type": "string"
+        },
+        {
+            "name": "hscode",
+            "type": "string"
+        }
+    ]
+}
