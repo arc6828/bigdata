@@ -1,10 +1,36 @@
 <html>
   <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <script type="text/javascript" src="loader.js"></script>
     <script type="text/javascript">
-      google.charts.load('current', {'packages':['treemap']});
-      google.charts.setOnLoadCallback(drawChart);
+      var chart_data = [];
+      fetch('treemap.json')
+        .then(response => response.json())
+        .then(data => {
+          
+          
+          chart_data.push(
+            ['Location', 'Parent', 'Market trade volume (size)', 'Market increase/decrease (color)'],
+          );
+          for(let item of Object.values(data) )
+          {
+            
+            console.log(item);
+            chart_data.push(
+              [item.location, item.parent, item.volume, Math.floor(Math.random() * Math.floor(200)-100)]
+            );
+          }
+
+          google.charts.load('current', {'packages':['treemap']});
+          google.charts.setOnLoadCallback(drawChart);
+
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        });
+      
       function drawChart() {
+        /*
         var data = google.visualization.arrayToDataTable([
           ['Location', 'Parent', 'Market trade volume (size)', 'Market increase/decrease (color)'],
           ['Global',    null,                 0,                               0],
@@ -36,6 +62,9 @@
           ['Congo',     'Africa',             10,                              12],
           ['Zaire',     'Africa',             8,                               10]
         ]);
+        */
+        console.log("BEFORE CHART : " ,chart_data);
+        var data = google.visualization.arrayToDataTable(chart_data);
 
         tree = new google.visualization.TreeMap(document.getElementById('chart_div'));
 
@@ -43,15 +72,30 @@
           minColor: '#f00',
           midColor: '#ddd',
           maxColor: '#0d0',
-          headerHeight: 15,
+          headerHeight: 50,
           fontColor: 'black',
-          showScale: true
+          fontSize : 20,
+          showScale: true,
+          generateTooltip: showFullTooltip
         });
+        function showFullTooltip(row, size, value) {
+          return '<div style="background:#fd9; padding:10px; border-style:solid">' +
+                '<span style="font-family:Courier"><b>' + data.getValue(row, 0) +
+                '</b>, ' + data.getValue(row, 1) + ', ' + data.getValue(row, 2) +
+                ', ' + data.getValue(row, 3) + '</span><br>' +
+                'Datatable row: ' + row + '<br>' +
+          data.getColumnLabel(2) + ' (total value of this cell and its children): ' + size + '<br>' +
+          data.getColumnLabel(3) + ': ' + value + ' </div>';
+        }
 
       }
     </script>
   </head>
   <body>
+    <h1>Tree Map of HSCODE</h2>
+    <p>
+      คลิกซ้ายเพื่อ zoom-in / คลิกขวาเพื่อ zoom-out
+    </p>
     <div id="chart_div" style="width: 900px; height: 500px;"></div>
   </body>
 </html>
