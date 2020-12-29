@@ -19,3 +19,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 Route::get('product','API\ProductController@index');
+
+Route::get('export-2hs','API\Export_2hs_timeController@index');
