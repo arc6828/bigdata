@@ -30,14 +30,14 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>#</th><th>Hscode</th><th>Product</th><th>Html Title</th><th>Html Data</th><th>Json</th><th>Scraping Date</th><th>Actions</th>
+                                        <th>#</th><th>Hscode</th><th>Product</th><th>Html Title</th><th>Json</th><th>Scraping Date</th><th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($export_2hs as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->hscode }}</td><td>{{ $item->product }}</td><td>{{ $item->html_title }}</td><td>{{ $item->html_data }}</td><td>{{ $item->json }}</td><td>{{ $item->scraping_date }}</td>
+                                        <td>{{ $item->hscode }}</td><td>{{ $item->product }}</td><td>{{ $item->html_title }}</td><td>{{ $item->json }}</td><td>{{ $item->scraping_date }}</td>
                                         <td>
                                             <a href="{{ url('/export_2hs/' . $item->id) }}" title="View Export_2h"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
                                             <a href="{{ url('/export_2hs/' . $item->id . '/edit') }}" title="Edit Export_2h"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>

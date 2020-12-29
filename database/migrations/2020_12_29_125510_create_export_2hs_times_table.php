@@ -19,7 +19,7 @@ class CreateExport2hsTimesTable extends Migration
             $table->string('exporter')->nullable();
             $table->string('importer')->nullable();
             $table->string('hscode')->nullable();
-            $table->float('value')->nullable();
+            $table->float('value',16,2)->nullable();
             $table->string('unit')->nullable();
             $table->string('trade_type')->nullable();
             });
