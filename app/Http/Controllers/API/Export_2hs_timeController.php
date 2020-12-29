@@ -23,7 +23,7 @@ class Export_2hs_timeController extends Controller
         $unit = $request->get('unit');
         $trade_type = $request->get('trade_type');
 
-        if (!empty($year_at)) {
+        if (!empty($year_at) || !empty($exporter) || !empty($hscode)) {
             $export_2hs_time = Export_2hs_time::select('id','year_at','exporter','hscode','value')
                 ->where('year_at', "LIKE" ,"%$year_at%")
                 ->where('exporter', 'LIKE', "%$exporter%")
