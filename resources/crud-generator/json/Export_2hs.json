@@ -1,0 +1,28 @@
+{
+    "fields": [        
+        {
+            "name": "hscode",
+            "type": "string"
+        },
+        {
+            "name": "product",
+            "type": "string"
+        },
+        {
+            "name": "html_title",
+            "type": "text"
+        },
+        {
+            "name": "html_data",
+            "type": "mediumtext"
+        },
+        {
+            "name": "json",
+            "type": "mediumtext"
+        },
+        {
+            "name": "scraping_date",
+            "type": "timestamp"
+        }
+    ]
+}

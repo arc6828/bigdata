@@ -1,0 +1,32 @@
+{
+    "fields": [        
+        {
+            "name": "year_at",
+            "type": "string"
+        },
+        {
+            "name": "exporter",
+            "type": "string"
+        },
+        {
+            "name": "importer",
+            "type": "string"
+        },
+        {
+            "name": "hscode",
+            "type": "string"
+        },
+        {
+            "name": "value",
+            "type": "float"
+        },
+        {
+            "name": "unit",
+            "type": "string"
+        },
+        {
+            "name": "trade_type",
+            "type": "string"
+        }
+    ]
+}
