@@ -18,7 +18,6 @@ class CountryController extends Controller
         $countries = Country::select("code","name","iso_code","iso_name","parentCode","parentName")
                 // ->limit(1000)
                 ->get();
-        }
         return $countries;
     }
 
