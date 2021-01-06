@@ -25,3 +25,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('export', 'ExportController');
 Route::resource('export_2hs', 'Export_2hsController');
 Route::resource('export_2hs_time', 'Export_2hs_timeController');
+
+Route::get('country/import', 'CountryController@import');
+Route::resource('country', 'CountryController');

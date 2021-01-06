@@ -35,9 +35,9 @@ class Export_2hs_timeController extends Controller
                 ->get();
         } else {
             // $export_2hs_time = Export_2hs_time::latest()->paginate($perPage);
-            return redirect("api/export-2hs?year_at=2019&hscode=99&exporter=thailand");
+            // return redirect("api/export-2hs?year_at=2019&hscode=99&exporter=thailand");
             $export_2hs_time = Export_2hs_time::select('id','year_at','exporter','hscode','value')
-                ->limit(1000)
+                // ->limit(1000)
                 ->get();
         }
         return $export_2hs_time;

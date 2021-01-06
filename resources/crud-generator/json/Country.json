@@ -1,0 +1,29 @@
+{
+    "fields": [        
+        {
+            "name": "code",
+            "type": "string"
+        },
+        {
+            "name": "name",
+            "type": "string"
+        },
+        {
+            "name": "iso_code",
+            "type": "string"
+        },
+        {
+            "name": "iso_name",
+            "type": "string"
+        },
+        {
+            "name": "parentCode",
+            "type": "string"
+        },
+        {
+            "name": "parentName",
+            "type": "string"
+        }
+
+    ]
+}

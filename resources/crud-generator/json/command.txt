@@ -4,3 +4,6 @@ php artisan crud:generate Export --fields_from_file="resources/crud-generator/js
 
 php artisan crud:generate Export_2hs --fields_from_file="resources/crud-generator/json/Export_2hs.json"
 php artisan crud:generate Export_2hs_time --fields_from_file="resources/crud-generator/json/Export_2hs_time.json"
+
+
+php artisan crud:generate Country --fields_from_file="resources/crud-generator/json/Country.json"
